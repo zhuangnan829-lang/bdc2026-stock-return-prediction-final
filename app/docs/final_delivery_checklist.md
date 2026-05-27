@@ -96,6 +96,7 @@
 - [x] PPT 图表引用路径已在 `final_presentation_alignment.md` 中统一核对
 - [x] Demo 展示顺序已与 `app/docs/demo_3min_main_flow.md` 完全一致
 - [x] 已准备“为什么选 LSTM sl20”的标准回答依据
+- [x] 正式答辩 PPT 已归档：`app/docs/沪深300股票收益预测与组合推荐_学术研究汇报_答辩终版.pptx`
 
 ## 10. 提交前最后检查
 
