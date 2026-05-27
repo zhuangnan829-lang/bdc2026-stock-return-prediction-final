@@ -1,0 +1,71 @@
+# Python environments
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Editor settings
+.vscode/
+.idea/
+
+# Local docker / tooling state
+.docker-local/
+
+# Logs
+*.log
+app/demo/streamlit_stdout.log
+app/demo/streamlit_stderr.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary outputs and caches
+.pytest_cache/
+.pytest_tmp/
+.mypy_cache/
+.ruff_cache/
+*.tmp
+*.temp
+tmp_*
+app/temp/
+
+# Large local rehearsal/package artifacts
+*.zip
+*.tar
+_work_package/
+_online_a_ref/
+_online_a_submission/
+
+# Heavy experiment/model search outputs kept out of git by default.
+# Curated summaries and frozen submission artifacts remain tracked explicitly.
+app/model/label_variant_search/
+app/model/label_variant_replay_clipped_topk_epochs8/
+app/model/offline_v4_medium_compare/
+app/model/dual_submission_packages/
+app/model/preserved_stable_packages/
+app/model/rank_blend/
+app/model/regime_aware_fusion/
+app/model/external_case_zip/
+app/model/topk_objective_search/
+app/model/regime_rerank_switch/
+app/model/lstm_snapshot_ensemble/
+app/model/turnover_stress_test/
+app/model/v4_rerank_candidate_recheck/
+app/model/sequence_length_search/
+app/model/transformer_lite/
+app/model/v4_rerank_penalty_search/
+app/model/sl60_transformer_replication_enhancement/
+app/model/topk_objective_search_prompt11_smoke/
+app/model/topk_objective_search_topk30_gamma2_epochs4/
+app/model/high_volatility_range_threshold_search/
+app/model/candidate_pool_search/
+app/model/weight_blend_search/
+app/model/transformer_lite_sl60/
+app/model/weight_cap_search/
+
+# Notebook checkpoints
+.ipynb_checkpoints/

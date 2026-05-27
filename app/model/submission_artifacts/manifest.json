@@ -1,0 +1,14 @@
+{
+  "status": "submission_artifacts_ready",
+  "profile_name": "lstm_sl20_base_alpha_v3_rs_crowding_mini4__hv_close_position_rerank",
+  "model_family": "lstm",
+  "feature_set": "base_alpha_v3_rs_crowding_mini4",
+  "model_path": "submission_artifacts/lstm_model.pt",
+  "copied_files": [
+    "app/model/submission_artifacts/lstm_model.pt",
+    "app/model/submission_artifacts/best_config.json",
+    "app/model/submission_artifacts/default_submission_config.json",
+    "app/model/submission_artifacts/final_submission_snapshot.md",
+    "app/model/submission_artifacts/model_meta.json"
+  ]
+}

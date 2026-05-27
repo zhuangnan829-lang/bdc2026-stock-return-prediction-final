@@ -1,0 +1,54 @@
+{
+  "profile_name": "robust_lstm_sl20_alpha_v3_rs_crowding_mini4_cs180_rp-30_blend05_mt050_cap20",
+  "status": "candidate_config_robust_stability",
+  "scenario": "high_volatility_sideways_market",
+  "feature_set": "base_alpha_v3_rs_crowding_mini4",
+  "feature_count": 20,
+  "target_mode": "cross_section_rank",
+  "model_family": "lstm",
+  "seed": 2026,
+  "validation_scheme": {
+    "type": "walk_forward",
+    "valid_dates": 20,
+    "num_folds": 3,
+    "sequence_length": 20
+  },
+  "selection_logic": {
+    "top_k": 5,
+    "primary_candidate_size": 180,
+    "enable_risk_filters": true,
+    "sort_strategy": "risk_adjusted",
+    "weighting_scheme": "pred_equal_blend",
+    "weight_blend_alpha": 0.5,
+    "max_single_weight": 0.2
+  },
+  "risk_filter_thresholds": {
+    "max_volatility_20d_pct": 0.86,
+    "max_volatility_5d_pct": 1.0,
+    "turnover_rate_lower_pct": 0.03,
+    "turnover_rate_upper_pct": 0.97,
+    "turnover_ratio_upper_pct": 0.95,
+    "risk_penalty_weight": -0.3
+  },
+  "execution_logic": {
+    "use_previous_result_when_available": true,
+    "max_turnover": 0.5,
+    "transaction_cost": 0.001
+  },
+  "intended_use": [
+    "Stability-oriented candidate for high-volatility sideways phases.",
+    "Uses blend_0.5 style weighting, max_single_weight 0.20, and lower turnover.",
+    "Gives up part of the score-chasing return profile to reduce execution churn and concentration."
+  ],
+  "evidence_targets": [
+    "experiment_leaderboard.csv",
+    "weight_cap_summary.csv",
+    "weight_blend_summary.csv",
+    "turnover_stress_summary.csv",
+    "stability_summary.csv"
+  ],
+  "notes": [
+    "This file is advisory only.",
+    "It must not overwrite app/model/default_submission_config.json unless manually confirmed."
+  ]
+}

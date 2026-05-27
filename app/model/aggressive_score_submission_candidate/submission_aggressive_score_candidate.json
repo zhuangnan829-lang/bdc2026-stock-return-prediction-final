@@ -1,0 +1,35 @@
+{
+  "profile_name": "aggressive_score_recent_strength_top6_take5_cap020",
+  "status": "candidate_only_do_not_sync_default",
+  "scenario": "single_slice_score_chase",
+  "source_candidate_result": "app\\model\\case_slice_submission_search\\generated_results\\recent_strength_pred__allow_600115__top6_take5_2__pred_full_cap0.20.csv",
+  "result_path": "app\\model\\aggressive_score_submission_candidate\\result_aggressive_score.csv",
+  "case_slice_score": 0.0774838612477946,
+  "candidate_stocks": [
+    "000792",
+    "600233",
+    "601669",
+    "600930",
+    "002463"
+  ],
+  "weights": [
+    0.2,
+    0.2,
+    0.2,
+    0.1999999999999999,
+    0.1999999999999999
+  ],
+  "selection_logic": {
+    "top_k": 5,
+    "candidate_family": "recent_strength_pred",
+    "take_rule": "top6_take5_2",
+    "weighting_scheme": "equal_full_cap0.20",
+    "max_single_weight": 0.2
+  },
+  "decision": "aggressive_package_ok; default_sync_requires_manual_confirmation",
+  "notes": [
+    "Generated for manual aggressive score review only.",
+    "This file does not overwrite app/output/result.csv or default_submission_config.json.",
+    "Use only if the operator explicitly chooses competition score chasing over stability."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "profile_name": "lstm_sl20_base_alpha_v3_rs_crowding_mini4__risk_adjusted_sort__pred_weight__cs180_v2086_v5100_rp-30_mt100",
+  "status": "frozen_default_submission_candidate",
+  "feature_set": "base_alpha_v3_rs_crowding_mini4",
+  "feature_count": 20,
+  "target_mode": "cross_section_rank",
+  "model_family": "lstm",
+  "seed": 2026,
+  "validation_scheme": {
+    "type": "walk_forward",
+    "valid_dates": 20,
+    "num_folds": 3,
+    "sequence_length": 20
+  },
+  "selection_logic": {
+    "top_k": 5,
+    "primary_candidate_size": 180,
+    "enable_risk_filters": true,
+    "sort_strategy": "risk_adjusted",
+    "weighting_scheme": "pred",
+    "max_single_weight": 0.18,
+    "rerank_signal_column": "close_position_20d",
+    "rerank_signal_weight": -0.05
+  },
+  "risk_filter_thresholds": {
+    "max_volatility_20d_pct": 0.86,
+    "max_volatility_5d_pct": 1.0,
+    "turnover_rate_lower_pct": 0.03,
+    "turnover_rate_upper_pct": 0.97,
+    "turnover_ratio_upper_pct": 0.95,
+    "risk_penalty_weight": -0.3
+  },
+  "execution_logic": {
+    "use_previous_result_when_available": false,
+    "max_turnover": 1.0,
+    "transaction_cost": 0.001
+  },
+  "ablation_conclusion": {
+    "feature_ablation_winner": "lstm_base_alpha_v3_rs_crowding_mini4",
+    "sort_strategy_winner": "risk_adjusted",
+    "weighting_winner": "pred",
+    "turnover_winner": "rp-60_mt100_zip_beating_default"
+  },
+  "notes": [
+    "Candidate only; do not overwrite default_submission_config.json.",
+    "Rerank signal close_position_20d weight -0.05."
+  ],
+  "model_name": "lstm",
+  "sequence_length": 20,
+  "sort_strategy": "risk_adjusted",
+  "weight_strategy": "pred",
+  "top_k": 5,
+  "candidate_size": 180,
+  "risk_penalty_weight": -0.3,
+  "max_turnover": 1.0,
+  "transaction_cost": 0.001,
+  "max_single_weight": 0.18,
+  "candidate_kind": "robust",
+  "source": "v4_rerank_candidate_recheck"
+}

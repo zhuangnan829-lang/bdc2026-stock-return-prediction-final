@@ -1,0 +1,43 @@
+section,metric,value,notes
+config,profile_name,lstm_sl10_base_alpha_v3_rs_crowding_mini4__risk_adjusted_sort__pred_weight__cs40_v2086_v596_rp10_mt80,current frozen default profile
+config,feature_set,base_alpha_v3_rs_crowding_mini4,current feature set
+config,feature_count,20,current feature count
+config,target_mode,cross_section_rank,current training target
+config,model_family,lstm,current main model
+config,sequence_length,10,current default sequence length
+config,sort_strategy,risk_adjusted,current ranking strategy
+config,weighting_scheme,pred,current weighting strategy
+config,primary_candidate_size,40,current candidate pool size
+config,max_volatility_20d_pct,0.86,current risk filter threshold
+config,max_volatility_5d_pct,0.96,current risk filter threshold
+config,turnover_rate_lower_pct,0.03,current liquidity lower bound
+config,turnover_rate_upper_pct,0.97,current liquidity upper bound
+config,turnover_ratio_upper_pct,0.95,current turnover ratio threshold
+config,risk_penalty_weight,0.10,current reranking penalty
+config,max_turnover,0.80,current default execution cap
+config,transaction_cost,0.001,current transaction cost assumption
+result,result_rows,5,current result.csv row count
+result,result_weight_sum,0.795957,current clean submission result.csv total weight
+result,stock_ids,"600115|600183|600372|688396|600029",current selected stocks
+result,weights,"0.199996|0.197865|0.136738|0.130693|0.130666",current selected weights
+result,cash_weight,0.204043,current clean submission cash weight
+walk_forward,rank_ic_mean,0.01168002338745768,current default LSTM walk-forward
+walk_forward,top5_mean_return_mean,0.010118703963325768,current default LSTM walk-forward
+walk_forward,rmse_mean,0.49846869042419834,current default LSTM walk-forward
+walk_forward,mae_mean,0.4953153838951181,current default LSTM walk-forward
+backtest,cumulative_return_after_cost,0.935572,current mini4 default local backtest candidate mt0.80
+backtest,sharpe_after_cost,3.629525,current mini4 default local backtest candidate mt0.80
+backtest,max_drawdown_after_cost,-0.042894,current mini4 default local backtest candidate mt0.80
+backtest,avg_turnover,0.761281,current mini4 default local backtest candidate mt0.80
+comparison,lightgbm_cumulative_return_after_cost,0.1253478939602093,previous LightGBM default local backtest
+comparison,lightgbm_sharpe_after_cost,1.5783075132243667,previous LightGBM default local backtest
+comparison,lstm_vs_lightgbm_conclusion,LSTM_outperforms,unified protocol winner
+docker,offline_rehearsal_status,passed,docker build and full container rehearsal passed
+checks,result_validator,passed,current result format validation passed
+checks,pre_submit_check,passed,current package consistency check passed
+case_comparison,our_case_slice_score,-0.0158350415650904,current mini4 default under case single-slice scoring
+case_comparison,our_previous_case_slice_score,-0.0387391261901916,previous refined default under case single-slice scoring
+case_comparison,case_visible_slice_score,0.0251794912169185,visible score from case package temp/tmp.csv
+case_comparison,case_reported_best_score,0.037838,reported best score from case package final_score.txt
+case_comparison,case_slice_gap_vs_visible,-0.0410145327820089,current default minus visible case score
+case_comparison,case_slice_gap_improvement,0.0229040846251012,improvement versus previous default on case slice score

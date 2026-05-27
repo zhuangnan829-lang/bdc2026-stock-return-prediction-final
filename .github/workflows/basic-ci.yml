@@ -1,0 +1,67 @@
+name: Basic CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  lightweight-tests:
+    name: Lightweight tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Run pytest
+        run: python -m pytest -q
+
+      - name: Check key files
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          required_paths = [
+              "README.md",
+              "requirements.txt",
+              "pytest.ini",
+              "app/readme.md",
+              "app/train.sh",
+              "app/test.sh",
+              "app/run_submission.sh",
+              "app/code/src/featurework.py",
+              "app/code/src/result_validator.py",
+              "app/code/src/compare_local_docker_result.py",
+              "app/code/src/load_submission_config.py",
+              "app/code/src/compare_config_consistency.py",
+              "app/model/default_submission_config.json",
+              "app/model/best_config.json",
+              "app/model/model_meta.json",
+              "app/model/docker_consistency_check.md",
+              "tests/test_result_validator.py",
+              "tests/test_backtest_basic.py",
+              "tests/test_feature_pipeline_smoke.py",
+              "tests/test_config_files.py",
+              "tests/test_readme_paths.py",
+          ]
+
+          missing = [path for path in required_paths if not Path(path).exists()]
+          if missing:
+              formatted = "\n".join(f"- {path}" for path in missing)
+              raise SystemExit(f"Missing required CI files:\n{formatted}")
+
+          print(f"Checked {len(required_paths)} required paths.")
+          PY

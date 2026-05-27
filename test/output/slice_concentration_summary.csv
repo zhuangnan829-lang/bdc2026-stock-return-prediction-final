@@ -1,0 +1,2 @@
+﻿scope,positions,weight_sum,max_single_weight,top2_weight_sum,max_single_contribution_share,portfolio_return,max_weight_stock_id,max_contribution_stock_id
+single_slice,5,0.8999999999999999,0.18,0.36,0.43084185505661265,0.007592609276203057,300316,600183

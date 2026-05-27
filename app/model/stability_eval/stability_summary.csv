@@ -1,0 +1,2 @@
+﻿model,feature_set,sequence_length,rank_ic_mean,rank_ic_std,worst_fold_rank_ic,best_fold_rank_ic,negative_fold_count,negative_day_rank_ic_ratio,top5_return_mean,top5_return_min_by_fold,top5_return_std,stability_score
+lstm,base_alpha_v3_rs_crowding_mini4,20,0.027982087211024954,0.06563325606086,-0.03349223685309722,0.11894604612263202,2,0.4,0.007502490371932375,0.003244139174538213,0.005445587996854177,-0.037332050447472676

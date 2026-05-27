@@ -1,0 +1,42 @@
+{
+  "profile_name": "lstm_sl20_base_alpha_v3_rs_crowding_mini4__hv_close_position_rerank",
+  "status": "frozen_best_config",
+  "training": {
+    "feature_set": "base_alpha_v3_rs_crowding_mini4",
+    "target_mode": "cross_section_rank",
+    "model_family": "lstm",
+    "seed": 2026,
+    "valid_dates": 20,
+    "num_folds": 3,
+    "sequence_length": 20,
+    "hidden_size": 64,
+    "num_layers": 1,
+    "dropout": 0.0,
+    "learning_rate": 0.001,
+    "batch_size": 256,
+    "epochs": 8,
+    "patience": 2
+  },
+  "selection": {
+    "top_k": 5,
+    "primary_candidate_size": 180,
+    "enable_risk_filters": true,
+    "sort_strategy": "risk_adjusted",
+    "weighting_scheme": "pred",
+    "max_single_weight": 0.18
+  },
+  "risk_filter_thresholds": {
+    "max_volatility_20d_pct": 0.86,
+    "max_volatility_5d_pct": 1.0,
+    "turnover_rate_lower_pct": 0.03,
+    "turnover_rate_upper_pct": 0.97,
+    "turnover_ratio_upper_pct": 0.95,
+    "risk_penalty_weight": -0.3
+  },
+  "execution": {
+    "use_previous_result_when_available": false,
+    "max_turnover": 1.0,
+    "transaction_cost": 0.001
+  },
+  "ablation_conclusion": {}
+}

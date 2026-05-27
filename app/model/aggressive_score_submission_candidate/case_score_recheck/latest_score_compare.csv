@@ -1,0 +1,3 @@
+﻿metric,our_score,case_score,diff_our_minus_case,judgement
+current_output_score,0.07748386124779463,0.02517949121691857,0.05230437003087606,our_higher
+recorded_best_score,0.07748386124779463,0.037838,0.039645861247794636,our_higher
