@@ -46,6 +46,7 @@
 - [x] `app/docs/unimplemented_model_applicability.md`
 - [x] `app/docs/final_presentation_alignment.md`
 - [x] `app/docs/final_delivery_checklist.md`
+- [x] `app/docs/结题报告_沪深300股票收益预测与组合推荐.docx`
 - [x] 中期/答辩相关展示口径已完成最终统一复核
 
 ## 5. 报告图表交付
