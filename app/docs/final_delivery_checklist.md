@@ -30,7 +30,7 @@
 - [x] `app/output/debug_candidates.csv`
 - [x] `app/model/formal_model_comparison/formal_model_comparison.csv`
 - [x] `app/model/backtest_summary.csv`
-- [x] `app/model/market_regime_analysis/fold_stage_performance.csv`
+- [x] 市场阶段分析图表素材已保留在 `app/docs/report_supplement_assets/market_regime_analysis_chart.png`
 - [x] `app/model/fold_1_predictions.csv`
 - [x] `app/model/fold1_short_term_ticket_summary.csv`
 - [x] `app/model/fold1_short_term_ticket_diagnostics.csv`
